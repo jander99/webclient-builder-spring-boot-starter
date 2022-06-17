@@ -2,9 +2,10 @@ spring.webflux:
   webclients:
     - name: Test1
       baseUrl: http://localhost:8080/
+      connectionTimeout: 1000
       oauth:
         clientId: test1
-        clientSecret: test1
+        clientSecret: testsecret1
         grantType: client_credentials
         scope: test1
         tokenUrl: http://localhost:8080/oauth/token
