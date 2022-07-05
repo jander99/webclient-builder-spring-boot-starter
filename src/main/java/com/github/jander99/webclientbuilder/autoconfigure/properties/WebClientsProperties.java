@@ -6,9 +6,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.List;
 
 @Data
-@ConfigurationProperties("spring.webflux")
+@ConfigurationProperties("webclient.builder")
 public class WebClientsProperties {
 
     private List<WebClientProperties> webClients;
+
+    // TODO: Allow for defaults to be configured here
 }
 
