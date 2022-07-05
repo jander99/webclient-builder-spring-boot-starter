@@ -2,7 +2,15 @@
 
 The aim of this Spring Boot Starter is to allow for a uniformly defined way to initialize multiple WebClient instances. 
 
-## Example Configuration ## 
+## Getting Started ## 
+
+There are a few steps in order to get up and running with WebClient Builder
+
+1. Add the following maven coordinates to the `pom.xml` or `build.gradle` file of your existing Spring Boot project. 
+2. Add a `webclient.builder` section to your application.yaml or application.properties file
+3. Provide at least one webclient configuration under the `webclients` section.
+
+### Example Configuration ### 
 
 The top-level Property definition is `webclient.builder`. Each WebClient is defined as a list under this property.
 ```yaml
@@ -32,3 +40,15 @@ webclient.builder:
       ...
 ```
 Note: OAuth settings are typically not something that can be defaulted, but proxy settings might be required by all clients. Any setting defined in a specific configuration will be utilized over the defaults. 
+
+## CI ## 
+
+Continuous Integration will be handled by Github Actions with every pull request. 
+
+## Maintainers ##
+
+List maintainers here
+
+## License ##
+
+This software is released under the [Apache2 License](LICENSE)
