@@ -43,6 +43,7 @@ public class WebClientBuilderAutoConfiguration {
         log.info("Initializing WebClients");
         webClientsProperties.getWebClients().forEach(webClientProperties -> {
             log.info("Building WebClient: {}", webClientProperties.getName());
+            log.debug(webClientProperties.toString());
 
             // Initialize a WebCLient builder
             WebClient.Builder builder = WebClient.builder();

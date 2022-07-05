@@ -1,4 +1,6 @@
-spring.webflux:
+
+# This is an example configuration block
+webclient.builder:
   webclients:
     - name: Test1
       baseUrl: http://localhost:8080/
@@ -9,3 +11,8 @@ spring.webflux:
         grantType: client_credentials
         scope: test1
         tokenUrl: http://localhost:8080/oauth/token
+
+# Setting Logger to Debug will output configuration for each webclient.
+logging:
+  level:
+    com.github.jander99.webclientbuilder.autoconfigure: debug
